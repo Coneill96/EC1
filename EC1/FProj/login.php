@@ -26,7 +26,7 @@
 	    <div class="uk-margin">
 	        <label class="uk-form-label" for="form-stacked-text">Username</label>
 	        <div class="uk-form-controls">
-	            <input class="uk-input" id="form-stacked-text2"  required="required"type="text" placeholder="B00......">
+	            <input class="uk-input" id="form-stacked-text2"  required="required"type="text" placeholder="Please enter student number">
 	        </div>
 	    </div>
 
