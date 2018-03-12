@@ -24,8 +24,8 @@
  			echo date("Y = d");
  		?>
  		<p>
- 			<a href="/login.php">Login</a>
- 			<a href="/register.php">Register</a>
+ 			<a href="/EC1/FProj/login.php">Login</a>
+ 			<a href="/EC1/FProj/register.php">Register</a>
  		</p>
  	</div>
 

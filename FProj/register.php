@@ -25,7 +25,7 @@
 	    <div class="uk-margin">
 	        <label class="uk-form-label" for="form-stacked-text">Username</label>
 	        <div class="uk-form-controls">
-	            <input class="uk-input" id="form-stacked-text2"  required="required"type="text" placeholder="B00......">
+	            <input class="uk-input" id="form-stacked-text2"  required="required" type="text" placeholder="B00......">
 	        </div>
 	    </div>
 
@@ -35,13 +35,11 @@
 	            <input class="uk-input" id="form-stacked-text" required="required" type="password" placeholder="Password">
 	        </div>
 	    </div>
-
 	    <div class="uk-margin">
 	    	<button class="uk-button uk-button-default" type="submit">Register</button>
 	   	</div>
 			</form>
  	</div>
-
 
 <?php require_once "inc/footer.php"; ?>
  

@@ -8,12 +8,12 @@ class DB {
 
 		try {
 
-			self::$con = PDO( 'mysql:charset=utf8mb4;host=localhost;;dbname=project'. 'root'. 'root');
+			self::$con = new PDO( 'mysql:charset=utf8mb4;host=localhost;port=3306;dbname=project', 'root', '');
 			self::$con->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 			self::$con->setAttribute( PDO::ATTR_PERSISTENT, false );
 
 		} catch (PDOException $e) {
-			echo "Could not connect to database.\r\n";
+			echo "Could not connect to database.";
 			exit;
 		}
 	}
