@@ -3,7 +3,6 @@
 		define('__CONFIG__', true);
 		//Require the config
 		require_once "inc/config.php"; 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +24,7 @@
 	    <div class="uk-margin">
 	        <label class="uk-form-label" for="form-stacked-text">Username</label>
 	        <div class="uk-form-controls">
-	            <input class="uk-input" id="form-stacked-text2"  required="required"type="text" placeholder="B00......">
+	            <input class="uk-input" id="form-stacked-text2"  required="required" type="text" placeholder="B00......">
 	        </div>
 	    </div>
 
@@ -35,6 +34,9 @@
 	            <input class="uk-input" id="form-stacked-text" required="required" type="password" placeholder="Password">
 	        </div>
 	    </div>
+
+	    <div class="uk-margin uk-alert uk-alert uk-alert-danger js-error" style='display: none;'></div>
+
 	    <div class="uk-margin">
 	    	<button class="uk-button uk-button-default" type="submit">Register</button>
 	   	</div>
