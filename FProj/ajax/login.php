@@ -9,7 +9,7 @@
 		$Username = Filter::String( $_POST['Username'] );
 		$password = $_POST['password'];
 
-		$user_found = FindUser($con, $Username, true);
+		$user_found = User::Find($Username, true);
 		
 		if($user_found) {
 			$user_id = (int) $user_found['user_id'];
