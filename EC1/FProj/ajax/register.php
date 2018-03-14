@@ -9,7 +9,7 @@
 
 		$Username = Filter::String( $_POST['Username'] );
 
-		$user_found = FindUser($con, $Username);
+		$user_found = User::Find($Username);
 
 		if($user_found) {
 			$return['error'] = "You already have an account";
