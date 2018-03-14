@@ -38,7 +38,10 @@
   <div class="uk-section uk-container">
     <h2>Dashboard</h2>
     <p>Hello <?php echo $User['Username']; ?>, you registered at <?php echo $User['reg_time']; ?></p>
+      <p><a href="/EC1/FProj/logout.php">Logout</a></p>
   </div>
+
+
 
 
 <?php require_once "inc/footer.php"; ?>

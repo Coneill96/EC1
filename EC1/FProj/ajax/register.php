@@ -6,16 +6,17 @@
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			header('Content-Type: application/json');
 		$return = [];
+
 		$Username = Filter::String( $_POST['Username'] );
-		
-		$findUser = $con->prepare("SELECT user_id FROM users WHERE Username = '$Username' LIMIT 1");
-		$findUser->bindParam(':Username', $Username, PDO::PARAM_STR);
-		$findUser->execute();
-		if($findUser->rowCount() == 1) {
+
+		$user_found = FindUser($con, $Username);
+
+		if($user_found) {
 			$return['error'] = "You already have an account";
 			$return['is_logged_in'] = false;
 		} else {
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
 			$addUser = $con->prepare("INSERT INTO users(Username, password) VALUES(:Username, :password)"); 
 			$addUser->bindParam(':Username', $Username, PDO::PARAM_STR);
 			$addUser->bindParam(':password', $password, PDO::PARAM_STR);

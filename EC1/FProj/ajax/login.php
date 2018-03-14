@@ -8,14 +8,13 @@
 		$return = [];
 		$Username = Filter::String( $_POST['Username'] );
 		$password = $_POST['password'];
+
+		$user_found = FindUser($con, $Username, true);
 		
-		$findUser = $con->prepare("SELECT user_id, password FROM users WHERE Username = '$Username' LIMIT 1");
-		$findUser->bindParam(':Username', $Username, PDO::PARAM_STR);
-		$findUser->execute();
-		if($findUser->rowCount() == 1) {
-			$User = $findUser->fetch(PDO::FETCH_ASSOC);
-			$user_id = (int) $User['user_id'];
-			$hash = (string) $User['password'];
+		if($user_found) {
+			$user_id = (int) $user_found['user_id'];
+			$hash = (string) $user_found['password'];
+			
 			if(password_verify($password, $hash)) {
 				// User is signed in
 				$return['redirect'] = 'dashboard.php';
@@ -26,7 +25,7 @@
 			$return['error'] = "You already have an account";
 		} else {
 			//They need to create a new account
-			$return['error'] = "You do not have an account. <a> href='register.php'>Create one now?</a>";
+			$return['error'] = "You do not have an account. <a> href='/EC1/Fproj/register.php'>Create one now?</a>";
 		}
 			echo json_encode($return, JSON_PRETTY_PRINT); exit;
 		} else {
