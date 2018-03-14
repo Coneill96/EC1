@@ -10,6 +10,23 @@
 
 		$return = [];
 
+		$Username = Filter::String($_POST['Username'] );
+		
+		$findUser = $con->prepare("SELECT user_id FROM users WHERE Username = '$Username' LIMIT 1");
+		$findUser->bindParam(':Username', $Username, PDO::PARAM_STR);
+		$findUser->execute();
+
+		if($findUser->rowCount() == 1) {
+
+			$return['error'] = "You already have an account";
+		} else {
+			$addUser = $con->prepare("INSERT INTO users(Username, password) VALUES(:Username, :password)"); 
+			$addUser->bindParam(':Username', $Username, PDO::PARAM_STR);
+			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
+			$addUser->execute();
+		}
+
+
 
 		$return['redirect'] = '/dashboard.php';
 		$return['name'] = "Chris O'Neill";
