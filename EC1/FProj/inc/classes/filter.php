@@ -1,12 +1,4 @@
 <?php 
-
-if(!defined('__CONFIG__')) {
-		exit('You do not have a config file');
-
-	}
-
-	Filter::String($Username);
-
 class Filter 
 {
 	
@@ -18,7 +10,9 @@ class Filter
 	 */
 	public static function String( $string, $html = false ) {
 		if(!$html) {
+			
 			$string = filter_var( $string , FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
+			
 		} else {
 			$string = filter_var( $string , FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 			
@@ -27,11 +21,11 @@ class Filter
 	}
 	
 	/**
-	 *  @param	string	$Username	Username to filter before putting inside InnoDB
-	 *  @return            			Filters and returns a valid or invalid Username address
+	 *  @param	string	$Username   Username to filter before putting inside InnoDB
+	 *  @return            			Filters and returns a valid or invalid email address
 	 */
 	public static function Username( $Username ) {
-		return filter_var( $Username , FILTER_SANITIZE_USERNAME);
+		return filter_var( $email , FILTER_SANITIZE_EMAIL);
 	}
 	
 	/**
