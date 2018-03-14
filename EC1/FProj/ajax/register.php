@@ -17,7 +17,7 @@
 		$findUser->execute();
 
 		if($findUser->rowCount() == 1) {
-
+			
 			$return['error'] = "You already have an account";
 			$return['is_logged_in'] = false;
 		} else {

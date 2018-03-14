@@ -4,9 +4,8 @@
 		//Require the config
 		require_once "inc/config.php"; 
 
-		echo $_SESSION['user_id'] . ' is your user id';
-		exit;
-
+		ForceLogin();
+		
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +17,12 @@
   <meta name="robots" context="follow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
   <title>Dashboard</title>
-  <base href="/" />
+  
  </head>
 
  <body>
  	<div class="uk-section uk-container">
- 	
+ 	Dashboard here: you are signed in as user: <?php echo $_SESSION['user_id']; ?>
  	</div>
 
 
