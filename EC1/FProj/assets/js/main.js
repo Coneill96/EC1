@@ -32,6 +32,7 @@ $(document)
 		data: dataObj,
 		dataType: 'json',
 		async: true,
+
 	})
 	.done(function ajaxDone(data) {
 		console.log(data);
@@ -90,9 +91,9 @@ $(document)
 		console.log(data);
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
-		} else if(data.is_logged_in === undefined) {
+		} else if(data.is_logged_in !== undefined) {
 			_error
-				.text(data.error)
+				.html(data.error)
 				.show();
 		}
 

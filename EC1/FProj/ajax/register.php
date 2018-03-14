@@ -33,7 +33,7 @@
 
 			$_SESSION['user_id'] = (int) $user_id;
 
-			$return['redirect'] = '/dashboard.php?message=welcome';;
+			$return['redirect'] = 'dashboard.php?message=welcome';;
 			$return['is_logged_in'] = true;
 		}
 
