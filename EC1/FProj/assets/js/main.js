@@ -1,10 +1,10 @@
-
 $(document)
 .on("submit", "form.js-register", function(event) {
 	event.preventDefault();
 
 	var _form = $(this);
 	var _error = $(".js-error", _form);
+
 	var dataObj = {
 		Username: $("input[type='text']", _form).val(),
 		password: $("input[type='password']", _form).val()
@@ -38,7 +38,7 @@ $(document)
 		console.log(data);
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
-		} else if(data.is_logged_in === undefined) {
+		} else if(data.error === undefined) {
 			_error
 				.text(data.error)
 				.show();

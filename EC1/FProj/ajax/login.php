@@ -3,9 +3,12 @@
 		define('__CONFIG__', true);
 		//Require the config
 		require_once "../inc/config.php";
+
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
 			//header('Content-Type: application/json');
+
 		$return = [];
+
 		$Username = Filter::String( $_POST['Username'] );
 		$password = $_POST['password'];
 
@@ -18,14 +21,15 @@
 			if(password_verify($password, $hash)) {
 				// User is signed in
 				$return['redirect'] = 'dashboard.php';
+
 				$_SESSION['user_id'] = $user_id;
 			} else {
 				$return['error'] = "Invalid Username/Password";
 			}
-			$return['error'] = "You already have an account";
+			
 		} else {
 			//They need to create a new account
-			$return['error'] = "You do not have an account. <a> href='/EC1/Fproj/register.php'>Create one now?</a>";
+			$return['error'] = "You do not have an account. <a> href='register.php'>Create one now?</a>";
 		}
 			echo json_encode($return, JSON_PRETTY_PRINT); exit;
 		} else {

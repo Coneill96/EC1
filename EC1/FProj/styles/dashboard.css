@@ -33,6 +33,7 @@ form.form1 h5 {
 	background-color: #F0F8FF;
 	padding-bottom: 30px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .btn-group {
@@ -85,12 +86,46 @@ h4 {
 	padding-right: 4%;
 	padding-left: 4%;
 	background-color: #F0F8FF;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	margin-top: 20px;
-	margin-bottom: 10%;
+	margin-bottom: 4%;
 }
 
 .ror_header {
 	padding-top: 10px
 
+}
+
+.logout {
+	float: right;
+	background-color: #1a2a4f;
+	color: white;
+
+}
+
+.form4 {
+	padding-right: 4%;
+	padding-left: 4%;
+	background-color: #F0F8FF;
+	padding-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 10%;
+}
+
+.btn8 {
+	background-color: #1a2a4f;
+	color: white;
+	margin-bottom: 10px;
+}
+
+.btn9 {
+	background-color: #1a2a4f;
+	color: white;
+	margin-bottom: 10px;
+
+}
+
+div.hidden
+{
+   display: none
 }

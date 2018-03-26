@@ -3,8 +3,9 @@
 		define('__CONFIG__', true);
 		//Require the config
 		require_once "../inc/config.php";
+
 		if($_SERVER['REQUEST_METHOD'] == 'POST') {
-			header('Content-Type: application/json');
+		//	header('Content-Type: application/json');
 		$return = [];
 
 		$Username = Filter::String( $_POST['Username'] );
