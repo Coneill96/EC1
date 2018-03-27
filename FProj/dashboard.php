@@ -165,7 +165,7 @@
 
     <p>Please provide a statement providing details of your extenuating circumstances that will be presented to the EC1 panel.</p>
      <div class="uk-margin">
-            <textarea class="uk-textarea" rows="5" id="statement" placeholder="Textarea"></textarea>
+            <textarea class="uk-textarea" rows="5" id="statement" required="required" placeholder="Textarea"></textarea>
       </div>
 
     <button type="submit" class="btn btn-primary btn9">Submit</button> 
