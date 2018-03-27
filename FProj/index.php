@@ -19,8 +19,10 @@
 
  <body>
  	<div class="uk-section uk-container">
+    <img src="images/UUJlogo.jpg" alt="Jordanstown logo">
+
  		<?php 
- 			echo "Hello world";
+ 			echo "Ulster University Jordanstown: Extenuating Circumstances Forms ";
  			echo date("Y = d");
  		?>
  		<p>
