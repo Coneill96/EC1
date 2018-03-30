@@ -26,7 +26,27 @@
 	    <div class="uk-margin">
 	        <label class="uk-form-label" for="form-stacked-text">Username</label>
 	        <div class="uk-form-controls">
-	            <input class="uk-input" id="form-stacked-text2"  required="required" type="text" placeholder="B00......">
+	            <input class="uk-input" id="Username"  required="required" type="text" placeholder="B00......">
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">Email</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="email" required="required" type="email" placeholder="Email">
+	        </div>
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">First Name</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="first_name" required="required" type="text" placeholder="First Name">
+	        </div>
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">Surname</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="surname" required="required" type="text" placeholder="surname">
 	        </div>
 	    </div>
 
