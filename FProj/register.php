@@ -20,6 +20,15 @@
 
  <body>
  	<div class="uk-section uk-container">
+ 		<div class="container2">
+    		<img src="images/UUJlogo.jpg" alt="Jordanstown logo">
+ 		
+	    		<div class="row">
+	    		<div class="col-sm-12">
+      				<h1 class="goldline">Faculty of Computing and engineering online EC1 Form submission</h1>
+    			</div>
+  				</div>
+			</div>
  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-" uk-grid>
  			<form class="uk-form-stacked js-register">
  		<h2>Register</h2>

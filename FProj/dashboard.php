@@ -13,7 +13,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>EC1 Form login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,9 +24,17 @@
 
  <body>
   <div class="uk-section uk-container">
-    <h2>UUJ Extenuating Circumstance form</h2>
-    <p>Hello <?php echo $User->Username; ?>, you registered at <?php echo $User->reg_time; ?></p>
-      <button class="btn btn-primary btn4"><a class="logout" href="/EC1/FProj/logout.php">Logout</a></button>
+    <div class="container2">
+    <img src="images/UUJlogo.jpg" alt="Jordanstown logo">
+    <button class="btn btn-primary btn4"><a class="logout" href="/EC1/FProj/logout.php">Logout</a></button>
+    <div class="row">
+    <div class="col-sm-12">
+      <h1 class="goldline">Faculty of Computing and engineering online EC1 Form submission</h1>
+    </div>
+  </div>
+</div>
+  
+      
   </div>
 
   <div class="row">
@@ -36,36 +43,33 @@
       <div class="well">Extenuating Circumstances</div>
       <form class="form1">
       <div class="row">
-        <div class="col-sm-2">
-          <h5>Student Name:</h5>
+        <div class="col-sm-4">
+          <h5>Student Name: <?php echo $User->first_name;?> <?php  echo $User->surname; ?> </h5>
+
         </div>
         <div class="col-sm-3">
-          <h5>Programme:</h5>
+          <h5>Course Name:</h5>
+
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2">
-          <h5>Username:</h5>
+        <div class="col-sm-4">
+          <h5>Username: <?php echo $User->Username; ?></h5>
         </div>
         <div class="col-sm-3">
-        <h5>Course:</h5>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-2">
-          <h5>DOB:</h5>
+        <h5></h5>
         </div>
       </div>
     </form>
 
-    <form class="form2">
+    <form class="form2" enctype="multipart/form-data">
       <div class="row">
         <h3 class="req_header">Requests</h3>
       </div>
     <div class="row">
       <div class="btn-group">
-       <button type="button" class="btn btn-primary btn4" id="show">+ New Request</button>
-       <button type="button" class="btn btn-primary btn5" >Edit Request</button>
+       <button type="button" class="btn btn-primary btn12" id="show" data-toggle="tooltip" title="CLick if you would like to submit a new request for extenuating circumstance">+ New Request</button>
+       <button type="button" class="btn btn-primary btn5">Edit Request</button>
        <button type="button" class="btn btn-primary btn6" id="hide">- Delete Request</button>
       </div>
     </div>
@@ -74,7 +78,7 @@
     <div id="New_form" class="hidden">
       <div class="row">
         <div class="col-sm-6">
-          <h5 class="Req_id">Request ID: <?php echo $User->Username; ?>, you registered at <?php echo $User->reg_time; ?></p></h5>
+          <h5 class="Req_id">Request ID: </p></h5>
         </div>
         <div class="col-sm-6">
           <h5 class="Req_id">Creation Date:</h5>
@@ -150,13 +154,10 @@
     <br></br>
     <div class="row">
       <div class="col-sm-2">
-        <p>Evidence :</p>
+        <p>Evidence (pdf) :</p>
       </div>
       <div class="col-sm-8">
-        <input class="uk-input" id="evidence" required="required" type="text" placeholder="Details...">
-      </div>
-      <div class="col-sm-2">
-        <button type="button" class="btn btn-primary btn7">Upload</button> 
+        <input id="evidence" required="required" type="file" name="evidence" accept="application/pdf">
       </div>
     </div>
     <button type="button" class="btn btn-primary btn8">Add Another Reason</button>
@@ -170,6 +171,9 @@
 
     <button type="submit" class="btn btn-primary btn9">Submit</button> 
     </form>
+    <div class="row">
+      <div id="success"></div>
+    <div id="output"></div>
     </div>    
       
     <br></br>

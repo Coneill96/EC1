@@ -15,7 +15,7 @@ class Page {
 	}
 	static function ForceDashboard() {
 		if(isset($_SESSION['user_id'])) {
-			// The iser is not allowed here.
+			// The User is not allowed here.
 			header("Location: dashboard.php"); exit;
 		} else {
 			//User not allowed here.

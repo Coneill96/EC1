@@ -10,7 +10,7 @@ $(document)
 		email: $("input[id='email']", _form).val(),
 		first_name: $("input[id='first_name']", _form).val(),
 		surname: $("input[id='surname']", _form).val(),
-		password: $("input[id='password']", _form).val(),
+		password: $("input[id='password']", _form).val()
 	};
 
 	if(dataObj.Username.length !== 9) {

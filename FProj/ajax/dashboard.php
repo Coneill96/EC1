@@ -19,7 +19,7 @@
 			$evidence = ( $_POST['evidence'] );
 			$statement = ( $_POST['statement'] );
 
-
+				
 				$stmt = $con->prepare("INSERT INTO assessment(ass_name, due_date, preferred_outcome, p_e_d) VALUES( :ass_name, :due_date, :preferred_outcome, :p_e_d)");
 				$stmt->bindParam(":ass_name", $ass_name, PDO::PARAM_STR);
 				$stmt->bindParam(":due_date", $due_date, PDO::PARAM_STR);
@@ -34,8 +34,9 @@
 
 			if($stmt->execute() AND $stmt1->execute() )
 			{
+				echo "Form has been submitted";
 				echo json_encode($return1, JSON_PRETTY_PRINT); exit;
-
+				
 			} else {
 				echo "Query Problems";
 			}
