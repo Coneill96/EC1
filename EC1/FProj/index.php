@@ -19,17 +19,40 @@
 
  <body>
  	<div class="uk-section uk-container">
+    <div class="container2">
     <img src="images/UUJlogo.jpg" alt="Jordanstown logo">
+ 		
+    <div class="row">
+    <div class="col-sm-12">
+      <h1 class="goldline">Faculty of Computing and engineering online EC1 Form submission</h1>
+    </div>
+  </div>
+</div>
 
- 		<?php 
- 			echo "Ulster University Jordanstown: Extenuating Circumstances Forms ";
- 			echo date("Y = d");
- 		?>
- 		<p>
- 			<a href="/EC1/FProj/login.php">Login</a>
- 			<a href="/EC1/FProj/register.php">Register</a>
- 		</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <br>
+      <h4>Sign in information for students</h4>
+      <p>Student number eg: B00345678</p>
+      <br>
+      <h4>Sign in information for Associates</h4>
+      <p>Associate number eg: a1234</p>
+
+      <p>If you have problems or are unable to sign in, you should contact the Help Desk number 07784544775 or email ONeill-C98@ulster.ac.uk</p>
+      <br></br>
+      <a  href="/EC1/FProj/login.php">Login</a>
+    </div>
+    <div class="col-sm-6">
+      <h4>If you have not registered yet please create an account</h4>
+      <p></p>
+      <a  href="/EC1/FProj/register.php">Register</a>
+    </div>
+  </div>
+  <br>
+  
+
  	</div>
+
 
 
 <?php require_once "inc/footer.php"; ?>

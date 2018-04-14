@@ -129,3 +129,12 @@ div.hidden
 {
    display: none
 }
+
+.btn4 {
+	float: right;
+}
+
+
+.uk-container {
+	padding-bottom: 10px;
+}

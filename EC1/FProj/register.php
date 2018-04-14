@@ -20,13 +20,42 @@
 
  <body>
  	<div class="uk-section uk-container">
+ 		<div class="container2">
+    		<img src="images/UUJlogo.jpg" alt="Jordanstown logo">
+ 		
+	    		<div class="row">
+	    		<div class="col-sm-12">
+      				<h1 class="goldline">Faculty of Computing and engineering online EC1 Form submission</h1>
+    			</div>
+  				</div>
+			</div>
  		<div class="uk-grid uk-child-width-1-3@s uk-child-width-1-" uk-grid>
  			<form class="uk-form-stacked js-register">
  		<h2>Register</h2>
 	    <div class="uk-margin">
 	        <label class="uk-form-label" for="form-stacked-text">Username</label>
 	        <div class="uk-form-controls">
-	            <input class="uk-input" id="form-stacked-text2"  required="required" type="text" placeholder="B00......">
+	            <input class="uk-input" id="Username"  required="required" type="text" placeholder="B00......">
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">Email</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="email" required="required" type="email" placeholder="Email">
+	        </div>
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">First Name</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="first_name" required="required" type="text" placeholder="First Name">
+	        </div>
+	    </div>
+
+	    <div class="uk-margin">
+	        <label class="uk-form-label" for="form-stacked-text">Surname</label>
+	        <div class="uk-form-controls">
+	            <input class="uk-input" id="surname" required="required" type="text" placeholder="surname">
 	        </div>
 	    </div>
 

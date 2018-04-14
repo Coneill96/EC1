@@ -6,8 +6,11 @@ $(document)
 	var _error = $(".js-error", _form);
 
 	var dataObj = {
-		Username: $("input[type='text']", _form).val(),
-		password: $("input[type='password']", _form).val()
+		Username: $("input[id='Username']", _form).val(),
+		email: $("input[id='email']", _form).val(),
+		first_name: $("input[id='first_name']", _form).val(),
+		surname: $("input[id='surname']", _form).val(),
+		password: $("input[id='password']", _form).val()
 	};
 
 	if(dataObj.Username.length !== 9) {
@@ -91,7 +94,7 @@ $(document)
 		console.log(data);
 		if(data.redirect !== undefined) {
 			window.location = data.redirect;
-		} else if(data.is_logged_in !== undefined) {
+		} else if(data.is_logged_in == undefined) {
 			_error
 				.html(data.error)
 				.show();
@@ -99,7 +102,7 @@ $(document)
 
 	})
 	.fail(function ajaxFailed(e) {
-	
+		console.log(e);
 	})
 	.always(function ajaxAlwaysDoThis(data) {
 		console.log('Always');
